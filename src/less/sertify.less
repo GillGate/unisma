@@ -1,0 +1,48 @@
+.sertify {
+	padding: 100px 0;
+	background-color: @light-grey;
+
+	h2 {
+		text-align: center;
+	}
+
+	&__wrapper {
+		.row-flex();
+		justify-content: center;
+		margin-top: 44px;
+	}
+
+	&__info {
+		width: 100%;
+		max-width: 570px;
+		margin-right: 86px;
+	}
+
+	&__item {
+		margin-bottom: 26px;
+
+		&--garant {
+			padding-right: 300px;
+			position: relative;
+
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 270px;
+				height: 280px;
+				background: url(../img/garanty.png) no-repeat;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+	}
+
+	&__text {
+		font-size: 16px;
+	}
+}

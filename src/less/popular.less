@@ -1,0 +1,71 @@
+.popular {
+	padding: 90px 0 50px; 
+	background-color: @light-grey;
+
+	.container {
+		text-align: center;
+		position: relative;
+	}
+
+	&__list {
+		.row-flex();
+
+		justify-content: space-between;
+		margin-top: 43px;
+		margin-bottom: 90px;
+		text-align: left;
+	}
+
+	&__item {
+		.col();
+		.size(4);
+
+		box-sizing: border-box;
+		padding: 35px 24px;
+		background-color: @white;
+		position: relative;
+
+		&:hover .popular__button {
+			visibility: visible;
+		}
+	}
+
+	&__type {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&__name {
+		margin-top: 8px;
+		font-size: 34px;
+		line-height: 40px;
+	}
+
+	&__usage {
+		display: flex;
+		margin-top: 10px;
+
+		div {
+			padding: 6px;
+			box-sizing: border-box;
+			width: 40px;
+			height: 40px;
+			margin-right: 14px;
+			background-color: @main-blue;
+		}
+	}
+
+	&__description {
+		font-size: 20px;
+	}
+
+	&__button {
+		visibility: hidden;
+		width: 100%;
+		text-transform: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+	}
+}

@@ -1,0 +1,49 @@
+.dignity {
+	padding: 100px 0;
+
+	h2 {
+		text-align: center;
+	}
+
+	&__wrapper {
+		.row-flex();
+
+		justify-content: center;
+		margin-top: 40px;
+	}
+
+	&__img {
+		width: 100%;
+		max-width: 470px;
+	}
+
+	&__list {
+		width: 100%;
+		max-width: 570px;
+		margin-left: 30px;
+
+		li {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 24px;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			margin-right: 10px;
+			margin-bottom: -2px;
+			background: url(../img/elephant.svg) no-repeat / cover;
+		}
+	}
+
+	&__text {
+		margin-top: 10px;
+		font-size: 16px;
+	}
+}

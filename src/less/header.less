@@ -1,0 +1,27 @@
+.header {
+	height: 190px;
+	background-color: @main-blue;
+
+	a {
+		color: @white;
+	}
+
+	&__wrapper {
+		height: inherit;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav {
+		flex-grow: 1;
+		margin: 0 62px;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-around;
+	}
+}
