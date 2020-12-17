@@ -8,6 +8,10 @@ const settings = {
         fields: '65px'
     },
     breakPoints: {
+        lg: {
+            width: "1350px",
+            fields: "35px"
+        },
         md: {
             width: "1024px",
             // fields: "15px"

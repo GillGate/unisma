@@ -14,11 +14,22 @@
 		margin-top: 43px;
 		margin-bottom: 90px;
 		text-align: left;
+
+		.lg-block({
+			justify-content: center;
+		});
 	}
 
 	&__item {
 		.col();
 		.size(4);
+		.size-lg(5);
+
+		.lg-block({
+			&:last-child { 
+				display: none; 
+			}
+		});
 
 		box-sizing: border-box;
 		padding: 35px 24px;
@@ -31,14 +42,18 @@
 	}
 
 	&__type {
-		font-size: 16px;
-		line-height: 20px;
+		// font-size: 16px;
+		// line-height: 20px;
+		font-size: 1rem;
+		line-height: 1.25rem;
 	}
 
 	&__name {
 		margin-top: 8px;
-		font-size: 34px;
-		line-height: 40px;
+		// font-size: 34px;
+		// line-height: 40px;
+		font-size: 2.125rem;
+		line-height: 2.5rem;
 	}
 
 	&__usage {
@@ -56,7 +71,8 @@
 	}
 
 	&__description {
-		font-size: 20px;
+		// font-size: 20px;
+		font-size: 1.25rem;
 	}
 
 	&__button {

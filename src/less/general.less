@@ -1,5 +1,9 @@
 .reset();
 
+html {
+	font-size: 16px;
+}
+
 body {
 	font-family: "Roboto", "Helvetica", sans-serif;
 	font-weight: 400;
@@ -13,13 +17,17 @@ h1,h2,h3 {
 }
 
 h1 {
-	font-size: 38px;
-	line-height: 52px;
+	// font-size: 38px;
+	// line-height: 52px;
+	font-size: 2.375rem;
+	line-height: 3.25rem;
 }
 
 h2 {
-	font-size: 38px;
-	line-height: 52px;
+	// font-size: 38px;
+	// line-height: 52px;
+	font-size: 2.375rem;
+	line-height: 3.25rem;
 }
 
 h1 > span, h2 > span {
@@ -27,8 +35,10 @@ h1 > span, h2 > span {
 }
 
 h3 {
-	font-size: 28px;
-	line-height: 33px;
+	// font-size: 28px;
+	// line-height: 33px;
+	font-size: 1.75rem;
+	line-height: 2.063rem;
 }
 
 p > span {
@@ -48,8 +58,10 @@ a {
 	width: 370px;
 	height: 56px;
 	text-align: center;
-	font-size: 20px;
-	line-height: 56px;
+	// font-size: 20px;
+	font-size: 1.25rem;
+	// line-height: 56px;
+	line-height: 3.5rem;
 	text-transform: uppercase;
 	color: @white;
 	background-color: @main-blue;
@@ -85,5 +97,13 @@ a {
 			right: auto;
 			left: 0px;
 		}
+
+		.lg-block({
+			right: 35px;
+
+			&:first-child {
+				left: 35px;
+			}
+		});
 	}
 }
