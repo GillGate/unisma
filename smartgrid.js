@@ -13,16 +13,14 @@ const settings = {
             fields: "35px"
         },
         md: {
-            width: "1024px",
-            // fields: "15px"
+            width: "1024px"
         },
         sm: {
-            width: "720px",
-            // fields: "10px"
+            width: "745px",
+            fields: "15px"
         },
         xs: {
-            width: "576px",
-            // fields: "5px"
+            width: "576px"
         }
     },
     oldSizeStyle: false

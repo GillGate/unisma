@@ -1,5 +1,5 @@
 .sertify {
-	padding: 100px 0;
+	// padding: 100px 0;
 	background-color: @light-grey;
 
 	h2 {
@@ -10,12 +10,20 @@
 		.row-flex();
 		justify-content: center;
 		margin-top: 44px;
+
+		.sm-block({
+			padding: 0 15px;
+		});
 	}
 
 	&__info {
 		width: 100%;
 		max-width: 570px;
 		margin-right: 86px;
+
+		.lg-block({
+			margin: 0 auto;
+		});
 	}
 
 	&__item {
@@ -25,15 +33,33 @@
 			padding-right: 300px;
 			position: relative;
 
+			.xs-block({
+				padding-right: 0;
+			});
+
 			&::after {
 				content: '';
 				display: inline-block;
-				width: 270px;
-				height: 280px;
-				background: url(../img/garanty.png) no-repeat;
+				// width: 270px;
+				// height: 280px;
+				width: 16.875rem;
+				height: 17.5rem;
+				background: url(../img/garanty.png) no-repeat / cover;
 				position: absolute;
 				top: 0;
 				right: 0;
+
+				.md-block({
+					right: 75px;
+				});
+
+				.sm-block({
+					right: 65px;
+				});
+
+				.xs-block({
+					display: none;
+				});
 			}
 		}
 	}

@@ -3,7 +3,7 @@
 
 @break_lg: 1350px;
 @break_md: 1024px;
-@break_sm: 720px;
+@break_sm: 745px;
 @break_xs: 576px;
 
 @offset: 30px;
@@ -20,6 +20,7 @@
 
 @fields: 65px;
 @fields_lg: 35px;
+@fields_sm: 15px;
 
 .wrapper-full(){
     padding-left: @fields;
@@ -28,6 +29,11 @@
     .lg-block({
         padding-left: @fields_lg;
         padding-right: @fields_lg;
+    });
+
+    .sm-block({
+        padding-left: @fields_sm;
+        padding-right: @fields_sm;
     });
 }
 
