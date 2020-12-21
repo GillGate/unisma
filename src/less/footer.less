@@ -1,6 +1,14 @@
 .footer {
 	height: 248px;
 	background-color: @main-blue;
+	
+	.md-block({
+		height: 120px;
+	});
+
+	.sm-block({
+		padding: 25px 0;
+	});
 
 	a {
 		color: @white;
@@ -11,11 +19,25 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.sm-block({
+			flex-direction: column;
+		});
+
+	}
+
+	&__logo {
+		.sm-block({
+			width: 40%;
+		});
 	}
 
 	&__rights {
-		// font-size: 14px;
-		font-size: 0.875rem;
+		font-size: 14px;
 		color: @white;
+
+		.sm-block({
+			margin: 15px 0;
+		});
 	}
 }

@@ -1,10 +1,19 @@
 .header {
 	height: 190px;
 	background-color: @main-blue;
-	display: none;
+
+	.md-block({
+		height: 120px;
+	});
 
 	a {
 		color: @white;
+	}
+
+	&__logo {
+		.sm-block({
+			width: 60%;
+		});
 	}
 
 	&__wrapper {
@@ -14,17 +23,51 @@
 		align-items: center;
 	}
 
-	&__nav {
+	&__list {
 		flex-grow: 1;
 		margin: 0 62px;
 		// font-size: 16px;
 		font-size: 1rem;
 		text-transform: uppercase;
+		position: relative;
+
+		.lg-block({
+			margin: 0;
+		});
+
+		.md-block({
+			order: 1;
+			flex-grow: 0;
+		});
 	}
 
-	&__list {
+	&__nav {
+		.md-block({
+			position: absolute;
+			right: 150px;
+			opacity: 0;
+			transition: opacity .3s ease .3s;
+			z-index: -1;
+
+			&--active {
+				opacity: 1;
+				z-index: 100;
+				transition: opacity .3s ease .3s;
+			}
+		});
+	}
+
+	&__listWrapper {
 		display: flex;
 		justify-content: space-around;
+
+		.md-block({
+			width: 156px;
+			display: block;
+			position: absolute;
+			background-color: @main-blue;
+			z-index: 100;
+		});
 
 		li {
 			position: relative;
@@ -34,6 +77,17 @@
 			padding: 8px 10px;
 			border-radius: 6px;
 			transition: background .3s ease;
+
+			.md-block({
+				display: block;
+				padding: 8px 10px;
+				border-radius: 0px;
+				border-bottom: 1px solid @white;
+
+				&:hover {
+					background-color: lighten(@main-blue, 50%);
+				}
+			});
 		}
 
 		a[href]:hover {
@@ -48,9 +102,20 @@
 		left: 0;
 		background-color: @main-blue;
 		width: 240px;
-		z-index: 1;
+		z-index: 10;
 
-		&:hover {
+		.lg-block({
+			left: -60px
+		});
+
+		.md-block({
+			top: 0px;
+			left: -240px;
+			// z-index: 101;
+		});
+
+		&:hover,
+		&:focus {
 			display: block;
 		}
 
@@ -65,7 +130,22 @@
 		&--second {
 			top: 0px;
 			left: 240px;
-			z-index: 2;
+			z-index: 102;
+
+			.lg-block({
+				left: 240px
+			});
+
+			.md-block({
+				left: auto;
+				right: -180px;
+				width: 180px;
+			});
+
+			.sm-block({
+				right: -160px;
+				width: 160px;
+			});
 		}
 
 	}
@@ -85,6 +165,20 @@
 				position: absolute;
 				right: -14px;
 				top: 12px;
+
+				.lg-block({
+					right: -8px;
+				});
+
+				.md-block({
+					top: 10px;
+					right: 4px;
+				});
+
+				.sm-block({
+					top: 8px;
+					right: 6px;
+				});
 			}
 
 			&:hover {
@@ -97,7 +191,88 @@
 		&--nestedSecond {
 			&:after {
 				right: 10px;
+
+				.lg-block({
+					right: 4px;
+				});
 			}
 		}
+	}
+
+	&__bar {
+		width: 60px;
+		height: 60px;
+		cursor: pointer;
+		display: none;
+		position: relative;
+		margin-left: auto;
+
+		.md-block({
+			display: block;
+			transition: transform 1s ease;
+
+			&--open {
+
+				span {
+					background: transparent;
+
+					&::before {
+						top: 0px;
+						transform: rotate(-45deg);
+					}
+
+					&::after {
+						transform: rotate(45deg);
+						bottom: 0px;
+					}
+				}
+
+
+			}
+		});
+
+		span {
+			display: block;
+			position: absolute;
+			top: 26px;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: @white;
+			transition: background .3s .3s;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 4px;
+				background-color: @white;
+				position: absolute;
+				transition-duration: 0.3s, 0.3s;
+				transition-delay: 0.3s, 0.3s;
+			}
+
+			&::before {
+				transition-property: top, transform;
+				top: -12px;
+			}
+
+			&::after {
+				transition-property: bottom, transform;
+				bottom: -12px;
+			}
+		}
+	}
+
+	.contactPhones {
+		.md-block({
+			margin-left: auto;
+			margin-right: 40px;
+		});
+
+		.xs-block({
+			display: none;
+		});
 	}
 }
