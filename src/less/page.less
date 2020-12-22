@@ -1,8 +1,40 @@
 .page {
+	h2 {
+		text-align: center;
+	}
+
+	p {
+		margin-bottom: 15px;
+
+		strong {
+			display: inline-block;
+			margin-top: 30px;
+			margin-bottom: 4px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+
+	ul {
+		padding-left: 20px;
+
+		li{
+			list-style: disc;
+		}
+	}
+
 	&__intro {
 		padding: 0;
 		color: @white;
 		height: 800px;
+
+		.md-block({
+			height: 600px;
+		});
+
+		.sm-block({
+			height: 400px;
+		});
 
 		.container {
 			display: flex;
@@ -13,6 +45,25 @@
 
 		&--aboutCompany {
 			background: @main-blue url(../img/intro-aboutCompany.jpg) no-repeat center / cover;
+
+			.page__introWrapper {
+
+				&::after {
+					background-color: rgba(255, 255, 255, 0.15);
+				}
+			}
+		}
+
+		&--shares {
+			background: @main-grey url(../img/shares-bg.jpg) no-repeat center / cover;
+
+			.page__introWrapper {
+				padding: 38px 178px 38px 0px;
+
+				&::after {
+					background-color: @red;
+				}
+			}
 		}
 
 		&Wrapper {
@@ -28,7 +79,6 @@
 				display: block;
 				width: 800%;
 				height: 100%;
-				background-color: rgba(255, 255, 255, 0.15);
 				position: absolute;
 				right: 0;
 				top: 0;
@@ -43,14 +93,41 @@
 		}
 	}
 
+	&__textWrapper {
+		max-width: 970px;
+		margin: 50px auto 0;
+
+		.sm-block({
+			margin-top: 25px;
+		});
+	}
+
 	figure {
 		margin: 0;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
+
+		.xs-block({
+			justify-content: center;
+			flex-wrap: wrap;
+		});
 		
 		img {
 			width: 100%;
 			max-width: 308px;
+
+			.md-block({
+				max-width: 250px;
+			});	
+
+			.sm-block({
+				max-width: 200px;
+			});	
+
+			.xs-block({
+				max-width: 100px;
+				margin-bottom: 10px;
+			});
 		}
 
 		figcaption {
@@ -60,6 +137,17 @@
 
 		p {
 			margin-bottom: 25px;
+
+			.sm-block({
+				margin-bottom: 15px;
+			});
+		}
+	}
+
+	&__content {
+		&--aboutCompany {
+			max-width: 1170px;
+			margin: 0 auto;
 		}
 	}
 
@@ -67,9 +155,14 @@
 		width: 100%;
 		max-width: 1170px;
 		margin-top: 105px;
+		margin-bottom: 32px;
 		position: relative;
 		z-index: 1;
 		cursor: pointer;
+
+		.sm-block({
+			margin-top: 50px;
+		});
 
 		&:hover {
 			&::after {
@@ -102,6 +195,58 @@
 			transform: translate(-50%, -50%);
 			z-index: 1;
 			transition: opacity .3s ease;
+		}
+	}
+
+	&__window {
+		max-width: 1170px;
+		margin: 92px auto 0;
+		padding: 100px 82px;
+		box-sizing: border-box;
+		box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+		font-size: 1rem;
+
+		.sm-block({
+			margin-top: 50px;
+			padding: 50px 40px;
+		});
+
+		.xs-block({
+			padding: 15x 10px;
+		});
+
+		strong {
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 1rem;
+			line-height: 2.063rem
+		}
+		h3 {
+			margin-top: 10px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		ol {
+			margin-bottom: 30px;
+			padding-left: 16px;
+		}
+
+		p {
+			
+			i {
+				display: inline-block;
+				max-width: 770px;
+				margin-bottom: 10px;
+			}
+
+			span {
+				font-weight: 400;
+				color: @text-blue;
+			}
+
+
 		}
 	}
 }

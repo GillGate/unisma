@@ -1,0 +1,55 @@
+.page {
+
+	.shares {
+		.row-flex();
+
+		justify-content: center;
+		margin-top: 100px;
+		padding-left: 0;
+
+		.md-block({
+			margin-top: 75px;
+		});
+
+		.sm-block({
+			margin-top: 50px;
+		});
+
+		&__item {
+			.col();
+			.size(6);
+			.size-md(8);
+			.size-sm(12);
+			.row-flex();
+
+			margin-bottom: 30px;
+			align-items: center;
+			list-style: none;
+
+			.md-block({
+				margin-bottom: 15px;
+			});
+
+			.xs-block({
+				justify-content: center;
+			});
+		}
+
+		&__img {
+			.col();
+			.size(4);
+			.size-xs(6);
+		}
+
+		&__info {
+			.col();
+			.size(8);
+			.size-xs(12);
+		}
+
+		&__title {
+			text-transform: none;
+		}
+	}
+
+}
