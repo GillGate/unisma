@@ -10,6 +10,10 @@
 		height: auto;
 	});
 
+	.sm-block({
+		padding: 35px 0;
+	});
+
 	&__wrapper {
 		.row-flex();
 		justify-content: space-around;
@@ -110,20 +114,60 @@
 	}
 
 	&__img {
+		min-height: 590px;
 		outline: none;
 		
 		.lg-block({
 			width: 60%;
 			margin: 0 auto;
+			min-height: 540px;
 		});
 
 		.md-block({
 			width: 85%;
+			min-height: 450px;
 		});
 
 		.sm-block({
-			width: 100%;
+			// width: 100%;
+			min-height: 408px;
 		});
+
+		.xs-block({
+			min-height: 340px;
+		});
+
+		.xxs-block({
+			min-height: 200px;
+		});
+
+		img {
+			width: 100%;
+			min-height: inherit;
+			object-fit: cover;
+			mask: url(../img/elephant.svg) top left / cover;
+
+			.lg-block({
+				width: 89%;
+				margin: 0 auto;
+			});
+
+			.md-block({
+				width: 73%;
+			});
+
+			.sm-block({
+				width: 84%;
+			});
+
+			.xs-block({
+				width: 90%;
+			});
+
+			.xxs-block({
+				width: 75%;
+			});
+		}
 	}
 
 	&__figcaption {

@@ -104,4 +104,9 @@ $(function(){
 		});
   	}
 
+  	$('img').magnify({
+  		lensWidth: 60,
+    	lensHeight: 60,
+  	});
+
 });

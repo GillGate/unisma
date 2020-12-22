@@ -1,0 +1,21 @@
+.breadcrums {
+	background: @light-grey;
+	padding: 14px 0;
+
+
+	a[href] {
+		&::after {
+			content: ' — ';
+		}
+	}
+
+	a {
+		display: inline-block;
+		font-size: 14px;
+		color: @main-blue;
+
+		&:last-child {
+			font-weight: 700;
+		}
+	}
+}
