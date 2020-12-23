@@ -109,4 +109,11 @@ $(function(){
     	lensHeight: 60,
   	});
 
+  	$('.form__radioboxItem').on('click', function() {
+  		$('.form__radioboxItem').removeClass('form__radioboxItem--checked');
+  		$('.form__radioboxItem input:checked').closest('.form__radioboxItem').addClass('form__radioboxItem--checked');
+  	});
+
+  	
+
 });

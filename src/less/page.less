@@ -100,6 +100,53 @@
 		.sm-block({
 			margin-top: 25px;
 		});
+
+		h3 {
+			margin-top: 40px;
+			margin-bottom: 20px;
+			font-size: 1.438rem;
+			line-height: 1.625rem;
+
+			.sm-block({
+				margin-top: 20px;
+				margin-bottom: 10px;
+			});
+		}
+
+		i {
+			max-width: 770px;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+
+		a {
+			color: @text-blue;
+		}
+
+		ol {
+			margin: 0;
+			margin-bottom: 10px;
+			padding-left: 20px;
+
+			ul li {
+				list-style: lower-latin;
+			}
+		}
+
+		strong {
+			display: inline-block;
+			margin: 10px 0;
+			text-transform: uppercase;
+			font-weight: 700;
+
+			.sm-block({
+				margin-top: 0px;
+			});
+		}
+
+		ul {
+			margin-bottom: 10px;
+		}
 	}
 
 	figure {
@@ -148,6 +195,30 @@
 		&--aboutCompany {
 			max-width: 1170px;
 			margin: 0 auto;
+		}
+
+		&--members {
+			.page__window {
+				margin-top: 50px;
+			}
+		}
+
+		&--pricelist {
+			.page__textWrapper {
+				margin-top: 0;
+			}
+			
+			h2 {
+				text-align: left;
+				font-size: 1.438rem;
+				line-height: 1.688rem;
+				text-transform: uppercase;
+				margin-bottom: 40px;
+
+				.md-block({
+					margin-bottom: 20px;
+				});
+			}
 		}
 	}
 
@@ -212,7 +283,8 @@
 		});
 
 		.xs-block({
-			padding: 15x 10px;
+			margin-top: 25px;
+			padding: 15px 10px;
 		});
 
 		strong {
@@ -231,22 +303,6 @@
 		ol {
 			margin-bottom: 30px;
 			padding-left: 16px;
-		}
-
-		p {
-			
-			i {
-				display: inline-block;
-				max-width: 770px;
-				margin-bottom: 10px;
-			}
-
-			span {
-				font-weight: 400;
-				color: @text-blue;
-			}
-
-
 		}
 	}
 }

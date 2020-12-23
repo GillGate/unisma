@@ -92,13 +92,17 @@ section {
 	font-size: 1.25rem;
 	line-height: 3.5rem;
 	text-transform: uppercase;
+	border: 1px solid transparent;
 	color: @white;
 	background-color: @main-blue;
-	transition: background-color .5s ease;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: background-color .5s ease, color .5s ease;
 
 	&:hover,
 	&:focus {
 		background-color: @button-hover-blue;
+		outline: none;
 	}
 
 	&--red {
@@ -109,6 +113,29 @@ section {
 			background-color: @button-hover-red;
 		}
 	}
+
+	&--white {
+		background-color: @white;
+		color: @main-blue;
+		border-color: @main-blue;
+
+		&:hover,
+		&:focus {
+			background-color: @button-hover-blue;
+			color: @white;
+		}
+	}
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
 }
 
 .controls {
