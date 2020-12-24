@@ -1,5 +1,5 @@
 .page {
-	h2 {
+	h1, h2 {
 		text-align: center;
 	}
 
@@ -191,7 +191,44 @@
 		}
 	}
 
+	table {
+		margin: 20px 0 30px;
+
+		tr:nth-child(odd) {
+			background-color: @main-grey;
+		}
+
+		tr:nth-child(even) {
+			background-color: @light-grey;
+		}
+
+		tr {
+			// width: 100%;
+			// max-width: 
+		}
+
+		td {
+			padding: 14px 120px 14px 40px;
+
+			.sm-block({
+				padding-right: 60px;
+				padding-left: 20px;
+			});
+		}
+	}
+
 	&__content {
+		h2 {
+			text-align: left;
+			font-size: 1.438rem;
+			line-height: 1.688rem;
+			text-transform: uppercase;
+			margin: 20px 0;
+
+			.md-block({
+				margin: 10px 0;
+			});
+		}
 		&--aboutCompany {
 			max-width: 1170px;
 			margin: 0 auto;
@@ -207,12 +244,8 @@
 			.page__textWrapper {
 				margin-top: 0;
 			}
-			
+
 			h2 {
-				text-align: left;
-				font-size: 1.438rem;
-				line-height: 1.688rem;
-				text-transform: uppercase;
 				margin-bottom: 40px;
 
 				.md-block({
