@@ -23,9 +23,16 @@
 		}
 	}
 
+	.header__nav ul {
+		padding-left: 0;
+
+		li {
+			list-style-type: none;
+		}
+	}
+
 	&__intro {
 		padding: 0;
-		color: @white;
 		height: 800px;
 
 		.md-block({
@@ -44,6 +51,7 @@
 
 
 		&--aboutCompany {
+			color: @white;
 			background: @main-blue url(../img/intro-aboutCompany.jpg) no-repeat center / cover;
 
 			.page__introWrapper {
@@ -55,6 +63,7 @@
 		}
 
 		&--shares {
+			color: @white;
 			background: @main-grey url(../img/shares-bg.jpg) no-repeat center / cover;
 
 			.page__introWrapper {
@@ -63,6 +72,51 @@
 				&::after {
 					background-color: @red;
 				}
+			}
+		}
+
+		&--articles {
+			background: @main-grey url(../img/page-x-bg.png);
+			
+			.page__introWrapper {
+				padding: 0;
+				max-width: 680px;
+				position: relative;
+
+				.md-block({
+					max-width: 100%;
+				});
+
+				h1 {
+					text-align: left;
+				}
+
+				&::after {
+					content: '';
+					display: inline-block;
+					width: 348px;
+					height: 361px;
+					background: url(../img/garanty.png) no-repeat / cover;
+					transform: translateY(-30%);
+					position: absolute;
+					top: 0;
+					right: -492px;
+
+					.lg-block({
+						width: 250px;
+						height: 260px;
+						transform: translateY(-14%);
+						right: -290px;
+					});
+
+					.md-block({
+						display: none;
+					});
+				}
+			}
+
+			.page__introText {
+				font-size: 1rem;
 			}
 		}
 
@@ -218,7 +272,7 @@
 	}
 
 	&__content {
-		h2 {
+		h2.contentTitle {
 			text-align: left;
 			font-size: 1.438rem;
 			line-height: 1.688rem;
@@ -229,6 +283,7 @@
 				margin: 10px 0;
 			});
 		}
+
 		&--aboutCompany {
 			max-width: 1170px;
 			margin: 0 auto;
@@ -251,6 +306,60 @@
 				.md-block({
 					margin-bottom: 20px;
 				});
+			}
+		}
+
+		&--articles {
+
+			ol {
+				padding-left: 0;
+				list-style-position: inside;
+
+				li {
+					margin-bottom: 20px;
+				}
+			}
+
+			strong {
+				margin: 0;
+				font-weight: 400;
+				line-height: 2.5rem;
+
+				span {
+					display: block;
+					font-weight: 700;
+				}
+
+				a {
+					color: @red;
+				}
+			}
+
+			figure {
+				margin-top: 30px;
+				align-items: center;
+
+				img {
+					max-width: 446px;
+
+					.md-block({
+						max-width: 350px;
+					});
+
+					.sm-block({
+						max-width: 250px;
+					});
+
+					.xs-block({
+						max-width: 80%;
+					});
+				}
+			}
+
+			figcaption {
+				ol {
+					padding-left: 20px;
+				}
 			}
 		}
 	}
@@ -307,7 +416,7 @@
 		margin: 92px auto 0;
 		padding: 100px 82px;
 		box-sizing: border-box;
-		box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+		box-shadow: @box-shadow;
 		font-size: 1rem;
 
 		.sm-block({

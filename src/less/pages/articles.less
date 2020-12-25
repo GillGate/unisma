@@ -1,0 +1,60 @@
+.page {
+
+	.articles {
+		.row-flex();
+
+		margin-top: 100px;
+
+		.sm-block({
+			margin-top: 50px;
+			justify-content: center;
+		});
+
+		&__item {
+			.col();
+			.size(6);
+			.size-sm(10);
+			.size-xs(12);
+
+			margin-bottom: 30px;
+			padding: 50px;
+			box-sizing: border-box;
+			box-shadow: @box-shadow;
+		}
+
+		&__desc {
+			display: inline-block;
+			margin-top: 10px;
+			text-transform: uppercase;
+		}
+
+		&__text {
+			margin-top: 20px;
+
+			.xs-block({
+				margin-top: 10px;
+			});
+		}
+
+		&__table {
+			td {
+				.lg-block({
+					padding: 14px 80px 14px 20px;
+				});
+
+				.md-block({
+					padding: 14px 40px 14px 20px;
+				});
+			}
+		}
+
+		&__button {
+			max-width: 12.813rem;
+			margin-top: 30px;
+
+			.xs-block({
+				margin-top: 16px;
+			});
+		}
+	}
+}

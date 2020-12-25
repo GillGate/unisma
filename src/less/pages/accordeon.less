@@ -1,0 +1,29 @@
+.accordeon {
+	margin-bottom: 30px;
+
+	&__item {
+		margin-bottom: 6px;
+		border: 1px solid rgba(33, 48, 66, 0.5);
+	}
+
+	&__title {
+		margin-bottom: 0 !important;
+		padding: 13px 17px;
+		box-sizing: border-box;
+		background-color: @main-grey;
+		color: @text-blue;
+		cursor: pointer;
+	}
+
+	&__text {
+		display: none;
+		padding: 11px 20px;
+		box-sizing: border-box;
+
+		.xs-block({
+			ol {
+				padding-left: 10px;
+			}
+		});
+	}
+}

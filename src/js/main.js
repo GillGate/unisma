@@ -114,6 +114,21 @@ $(function(){
   		$('.form__radioboxItem input:checked').closest('.form__radioboxItem').addClass('form__radioboxItem--checked');
   	});
 
-  	
+  	$('.accordeon__title').on('click', function() {
+  		$(this).next().slideToggle();
+        $('.accordeon__title').not(this).next().slideUp();
+  	});
+
+  	$('.page__link--toForm').on('click', function(e) {
+	    e.preventDefault();
+
+	    let target = $(this).attr('href');
+
+	    $('html, body').animate({
+	      scrollTop: $(target).offset().top - 20
+	    }, 700);
+
+	    $('.form__input:first input').focus();
+	});
 
 });
