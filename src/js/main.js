@@ -131,4 +131,22 @@ $(function(){
 	    $('.form__input:first input').focus();
 	});
 
+	$('.product__slider').slick({
+		prevArrow: '.product__arrow--prev',
+		nextArrow: '.product__arrow--next',
+		asNavFor: '.product__sliderNav'
+	});
+
+	$('.product__sliderNav').slick({
+		slidesToShow: 4,
+		arrows: false
+	});
+
+	$('.product__slider').on('afterChange', function() {
+		let $sliderIndex = $('.product__slider .product__sliderItem.slick-current').index();
+		$('.product__order--current').text($sliderIndex);
+	});
+
+	$('.scrollbar-inner').scrollbar();
+
 });

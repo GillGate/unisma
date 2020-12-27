@@ -1,0 +1,64 @@
+.page {
+	.catalog {
+		display: flex;
+		align-items: flex-start;
+
+		.container {
+			max-width: 1500px;
+		}
+
+		&__wrapper {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		&__aside {
+			margin-top: 50px;
+			flex-basis: 320px;
+			flex-grow: 1;
+
+			.sm-block({
+				flex-basis: 280px;
+			});
+		}
+
+		&__list {
+			.row-flex();
+
+			margin-top: 50px;
+			justify-content: center;
+			width: 100%;
+			max-width: 1150px;
+		}
+
+		&__item {
+			.col();
+			.size(6);
+			.size-md(8);
+			.size-sm(12);
+
+			margin-bottom: 30px;
+			padding: 40px;
+			list-style: none;
+			text-align: center;
+			box-shadow: @box-shadow;
+			box-sizing: border-box;
+		}
+
+		&__title {
+			font-size: 1.438rem;
+			line-height: 1.625rem;
+			margin-bottom: 20px;
+		}
+
+		&__button {
+			margin-top: 20px;
+			text-transform: none;
+
+			.lg-block({
+				width: 100%;
+
+			});
+		}
+	}
+}

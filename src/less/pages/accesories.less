@@ -1,0 +1,69 @@
+.page {
+	.accesories {
+		margin: 50px auto;
+		width: 1170px;
+		display: flex;
+		overflow-y: hidden;
+
+		.lg-block({
+			width: 100%;
+			max-width: 1170px;
+		});
+
+		&.scroll-wrapper {
+			margin-top: 0;
+		}
+
+		&__item {
+			min-width: 270px;
+			height: 344px;
+			margin-right: 26px;
+			box-shadow: @box-shadow;
+			display: flex;
+			flex-direction: column;
+
+			.md-block({
+				// height: auto;
+				min-width: 170px;
+				height: 250px;
+			});
+		}
+
+		&__title {
+			margin: 45px 0 auto;
+			text-transform: none;
+			text-align: center;
+			font-size: 1rem;
+			line-height: 1.25rem;
+		}
+
+		&__img {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&.scrollbar-inner>.scroll-element.scroll-x {
+   			height: 12px;
+
+   			.scroll-element_outer {
+   				border-radius: 52px;
+   			}
+
+	   		.scroll-element_track {
+		    	background-color: #CECECE;
+			}
+
+			.scroll-bar {
+				background-color: #CECECE !important;
+				border-radius: 52px;
+				opacity: 1;
+				position: relative;
+			}
+   		}
+
+		
+	}
+}
