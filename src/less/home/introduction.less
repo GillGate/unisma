@@ -118,54 +118,39 @@
 		outline: none;
 		
 		.lg-block({
-			width: 60%;
-			margin: 0 auto;
-			min-height: 540px;
+			// width: 60%;
+			// min-height: 600px;
 		});
 
 		.md-block({
-			width: 85%;
-			min-height: 450px;
+			// width: 100%;
+			min-height: 360px;
 		});
 
 		.sm-block({
-			// width: 100%;
-			min-height: 408px;
+			// width: 420px;
+			min-height: 285px;
 		});
 
 		.xs-block({
-			min-height: 340px;
+			min-height: 190px;
 		});
 
 		.xxs-block({
-			min-height: 200px;
+			min-height: 150px;
 		});
 
 		img {
 			width: 100%;
 			min-height: inherit;
 			object-fit: cover;
-			mask: url(../img/elephant.svg) top left / cover;
-
-			.lg-block({
-				width: 89%;
-				margin: 0 auto;
-			});
+			mask: url(../img/elephant.svg) center / cover;
+			mask-repeat: no-repeat;
 
 			.md-block({
-				width: 73%;
-			});
-
-			.sm-block({
-				width: 84%;
-			});
-
-			.xs-block({
-				width: 90%;
-			});
-
-			.xxs-block({
-				width: 75%;
+				object-fit: contain;
+				mask: url(../img/elephant.svg) center / contain;
+				mask-repeat: no-repeat;
 			});
 		}
 	}

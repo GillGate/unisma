@@ -1,13 +1,10 @@
 .footer {
 	height: 248px;
 	background-color: @main-blue;
+	box-sizing: border-box;
 	
 	.md-block({
-		height: 120px;
-	});
-
-	.sm-block({
-		padding: 25px 0;
+		height: 160px;
 	});
 
 	a {
@@ -19,9 +16,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		background-color: inherit;
 
 		.sm-block({
 			flex-direction: column;
+			padding: 25px 0;
 		});
 
 	}
@@ -37,7 +36,7 @@
 		color: @white;
 
 		.sm-block({
-			margin: 15px 0;
+			padding: 15px 0;
 		});
 	}
 

@@ -109,11 +109,6 @@ $(function(){
     	lensHeight: 60,
   	});
 
-  	$('.form__radioboxItem').on('click', function() {
-  		$('.form__radioboxItem').removeClass('form__radioboxItem--checked');
-  		$('.form__radioboxItem input:checked').closest('.form__radioboxItem').addClass('form__radioboxItem--checked');
-  	});
-
   	$('.accordeon__title').on('click', function() {
   		$(this).next().slideToggle();
         $('.accordeon__title').not(this).next().slideUp();
@@ -134,12 +129,29 @@ $(function(){
 	$('.product__slider').slick({
 		prevArrow: '.product__arrow--prev',
 		nextArrow: '.product__arrow--next',
-		asNavFor: '.product__sliderNav'
+		asNavFor: '.product__sliderNav',
+		responsive: [
+		    {
+				breakpoint: 746,
+				settings: {
+					arrows: false
+				}
+			},
+		]
 	});
 
 	$('.product__sliderNav').slick({
 		slidesToShow: 4,
-		arrows: false
+		arrows: false,
+		asNavFor: '.product__slider',
+		responsive: [
+		    {
+				breakpoint: 746,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+		]
 	});
 
 	$('.product__slider').on('afterChange', function() {
@@ -148,5 +160,77 @@ $(function(){
 	});
 
 	$('.scrollbar-inner').scrollbar();
+
+	let $radioLabel = $('.form__radioboxItem');
+	let $formInput = $('.form__input');
+
+	$radioLabel.on('click', function() {
+  		$radioLabel.removeClass('form__radioboxItem--checked');
+  		$radioLabel.children().prop('checked', false);
+
+  		$(this).children().prop('checked', true);
+  		$('.form__radioboxItem input:checked').closest('.form__radioboxItem').addClass('form__radioboxItem--checked');
+  	});
+
+  	$radioLabel.on('keydown', function(e) {
+	    if (e.keyCode === 13) {
+	      $(this).trigger('click');
+
+	      e.preventDefault();
+	    }
+  	});
+
+  	$('.form__button--clear').on('click', function(e) {
+  		e.preventDefault();
+
+  		$formInput.children().val('');
+  	});
+
+  	let $submit = $('.form__button--submit');
+    let $form   = $('.form__wrapper');
+    let $result = $('.form__result');
+    let $errors = $('label[data-error]');
+
+    $($submit).on('click', function() {
+        $submit.attr('disabled', true);
+
+        $.ajax({
+            url: '/send.php',
+            method: 'POST',
+            data: $form.serialize(),
+            dataType: 'json',
+            timeout: 10000,
+            success: onSuccess,
+            error: function() {
+                $result.html('Превышено ожидание ответа от сервера...');
+            },
+            complete: function() {
+                $submit.attr('disabled', false);
+                console.log($form.serialize());
+                // $submit.text('Заказать консультацию');
+            },
+        });
+
+        function onSuccess(data) {
+            if(data.res) {
+                $form.slideUp(300);
+                $result.html('Заявка отправлена!');
+            } else {
+                $errors.attr('data-error', '');
+                $('.form__input').removeClass('form__input--wrong');
+
+                for( let name in data.errors) {
+                    let target = $(`[name=${name}]`);
+                    
+                    if(target.length > 0){
+                        target.closest($errors).attr('data-error', data.errors[name]);
+                        target.parent().addClass('form__input--wrong');
+                    }
+                }
+            }
+        }
+    });
+
+
 
 });

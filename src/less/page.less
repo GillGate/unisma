@@ -36,15 +36,19 @@
 		height: 800px;
 
 		.md-block({
-			height: 600px;
+			height: 640px;
 		});
 
 		.sm-block({
-			height: 400px;
+			height: 420px;
 		});
 
 		.xs-block({
-			height: 300px;
+			height: 310px;
+		});
+
+		.xxs-block({
+			height: 260px;
 		});
 
 		.container {
@@ -72,6 +76,10 @@
 
 			.page__introWrapper {
 				padding: 38px 178px 38px 0px;
+
+				.sm-block({
+					padding-right: 20px;
+				});
 
 				&::after {
 					background-color: @red;
@@ -334,6 +342,7 @@
 		}
 
 		&--pricelist {
+
 			.page__textWrapper {
 				margin-top: 0;
 			}
@@ -422,8 +431,10 @@
 
 		&::before {
 			content: '';
-			width: 150px;
-			height: 60px;
+			// width: 150px;
+			// height: 60px;
+			width: 9.375rem;
+			height: 3.75rem;
 			background: url(../img/play.svg) no-repeat center / contain;
 			position: absolute;
 			top: 50%;
@@ -434,8 +445,10 @@
 
 		&::after {
 			content: '';
-			width: 168px;
-			height: 88px;
+			// width: 168px;
+			// height: 88px;
+			width: 10.5rem;
+			height: 5.5rem;
 			background-color: @red;
 			border-radius: 15px;
 			opacity: 0.8;
@@ -463,7 +476,7 @@
 
 		.xs-block({
 			margin-top: 25px;
-			padding: 15px 10px;
+			padding: 25px 20px;
 		});
 
 		strong {

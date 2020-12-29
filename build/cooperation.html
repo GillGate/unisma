@@ -17,34 +17,35 @@
 				<nav class="header__nav">
 					<ul class="header__listWrapper">
 						<li>
-							<a href="#">Продукция</a>
+							<a href="/catalog.html">Продукция</a>
 						</li>
 						<li>
-							<a href="#">Готовая мебель</a>
+							<a href="/product.html">Готовая мебель</a>
 						</li>
 						<li>
 							<a class="header__item--nested">Наша компания</a>
 	 						<ul class="header__nestedList">
 								<li><a href="/about.html">О компании</a></li>
-								<li><a href="#">Статьи</a></li>
+								<li><a href="/articles.html">Статьи</a></li>
 								<li><a href="/shares.html">Акции</a></li>
+								<li><a href="/news.html">Новости</a></li>
 								<li><a href="/partner.html">Программа Партнёр</a></li>
 								<li><a href="/sequencing.html">Последовательность действий</a></li>
-								<li><a href="#">Список участинков</a></li>
+								<li><a href="/members.html">Список участинков</a></li>
 								<li>
 									<a href="/condotions.html" class="header__item--nested header__item--nestedSecond">Условия работы</a>
 									<ul class="header__nestedList header__nestedList--second">
-										<li><a href="#">Прайс лист</a></li>
-										<li><a href="#">Доставка</a></li>
-										<li><a href="#">Гарантия</a></li>
-										<li><a href="#">Правовая информация</a></li>
-										<li><a href="#">Начать сотрудничество</a></li>
+										<li><a href="/pricelist.html">Прайс лист</a></li>
+										<li><a href="/delivery.html">Доставка</a></li>
+										<li><a href="/garanty.html">Гарантия</a></li>
+										<li><a href="/legalinfo.html">Правовая информация</a></li>
+										<li><a href="/cooperation.html">Начать сотрудничество</a></li>
 									</ul>
 								</li>
 							</ul>
 						</li>
 						<li>
-							<a href="#">Контакты</a>
+							<a href="/contacts.html">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -134,36 +135,36 @@
 						Для получения прайс-листа, отправьте сообщение с пометкой "прайс" в поле "тема" на наш e-mail info@unisma.ru
 					</p>
 					<form class="form__wrapper">
-						<div class="form__input" data-error="">
+						<label class="form__input" data-error="">
 							<input type="text" name="name" placeholder="Ф.И.О.:">
-						</div>
-						<div class="form__input" data-error="">
+						</label>
+						<label class="form__input" data-error="">
 							<input type="email" name="email" placeholder="Ваш e-mail:">
-						</div>
-						<div class="form__input" data-error="">
+						</label>
+						<label class="form__input" data-error="">
 							<input type="tel" name="phone" placeholder="Телефон:">
-						</div>
-						<div class="form__input" data-error="">
+						</label>
+						<label class="form__input" data-error="">
 							<input type="text" name="company" placeholder="Компания:">
-						</div>
-						<div class="form__input" data-error="">
+						</label>
+						<label class="form__input" data-error="">
 							<input type="text" name="position" placeholder="Должность:">
-						</div>
-						<div class="form__input" data-error="">
+						</label>
+						<label class="form__input" data-error="">
 							<input type="site" name="site" placeholder="Сайт (обязательно для получения прайс-листа):">
-						</div>
+						</label>
 						<div class="form__radiobox">
 							<span class="form__radioboxTitle">Как вы узнали он нас?</span>
 							<div class="form__radioboxWrapper">
-								<label class="form__radioboxItem">
-									<input class="visually-hidden" value="Поиск в интернете" name="discover" type="radio">Поиск в интернете
+								<label class="form__radioboxItem form__radioboxItem--checked" tabindex="0">
+									<input class="visually-hidden" tabindex="-1" value="Поиск в интернете" name="discover" type="radio" checked="">Поиск в интернете
 								</label>
 								<label class="form__radioboxItem" tabindex="0">
-									<input class="visually-hidden" value="Рассылка" name="discover" type="radio">
+									<input class="visually-hidden" tabindex="-1" value="Рассылка" name="discover" type="radio">
 									Рассылка
 								</label>
 								<label class="form__radioboxItem" tabindex="0">
-									<input class="visually-hidden" value="Рекомендации" name="discover" type="radio">
+									<input class="visually-hidden" tabindex="-1" value="Рекомендации" name="discover" type="radio">
 									Рекомендации
 								</label>
 							</div>
@@ -173,16 +174,17 @@
 						</p>
 						<div class="form__btnWrapper">
 							<button class="button form__button form__button--submit">Отправить</button>
-							<button class="button button--white form__button form__button--clear">Очисить</button>
+							<button class="button button--white form__button form__button--clear">Очистить</button>
 						</div>
 					</form>
+					<div class="form__result"></div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<footer class="footer">
 		<div class="container footer__wrapper">
-			<a href="#" class="footer__logo">
+			<a href="/" class="footer__logo">
 				<img src="img/logo.png" alt="Unisma | We can do it first">
 			</a>
 			<div class="footer__rights">
